@@ -1,0 +1,531 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+*{
+
+   box-sizing: border-box;
+}
+
+
+body{
+   margin: 0;
+   
+   font-family:'Roboto Condensed', sans-serif;
+   background-color: black #fff;
+   /* background-image: url("../video/bg.jpg"); */
+   overflow-x: hidden;
+
+}
+
+                /* style video */
+video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 754px; 
+      object-fit: cover; 
+      z-index: -1;
+      
+}    
+.all{
+   height: 754px;
+   
+  
+}
+
+
+               /* text page home */
+.text_vedio h1{
+   font-size: 100px;
+   /* padding-left: 124px;
+   padding-top: 120px;   */
+   color: blue;
+   display: flex;
+   justify-content: center;
+   font-family: 'Times New Roman', Times, serif;
+}
+.text_vedio h1{
+      font-size: 190px;
+      line-height: 114px;
+      margin-left: -10px;
+      /* color: transparent #fff; */
+      -webkit-text-stroke: 2px #fff;
+      background-position: 0 0;
+      animation: back 20s linear infinite;
+      margin-top: 20px;
+      margin-bottom: 70px;
+      opacity: 0;
+      transform: translateX(-400px);
+      animation: apparition 0.9s 1.6s ease-out forwards;
+   }
+.text_vedio h1 span{
+   display: flex;
+   justify-content: space-between;
+   align-content: space-around;
+   flex-wrap: wrap;
+   flex-direction: column-reverse;
+   transform: translateY(-400px);
+   animation: apparition 0.9s 1.8s ease-out forwards;
+   height: 200px;
+   margin-left: 30px;
+   }
+.buttom_learn_more {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   opacity: 0;
+      transform: translateY(-30px);
+      animation: apparition 0.5s 2s ease-out forwards;
+}     
+.buttom_learn_more button {
+   padding: 14px;
+   background-color: transparent;
+   border-radius: 27px;
+   border-color: blue;
+   color: #fff;
+   margin-left: 64px;
+   /* padding-right: 43px; */
+   font-size: 20px;
+   font-family: 'Times New Roman', Times, serif;
+   opacity: 0;
+   transform: translateY(-500px);
+   animation: apparition 0.9s 1.7s ease-out forwards;
+}  
+.buttom_learn_more button i  {
+   margin-left: 10px;
+
+ } 
+ .buttom_learn_more button:hover {
+  
+   background-color: #ffffff;
+   color: #2803ff ;
+   transition:   0.5s;
+   
+ } 
+   /* test motivation */
+.text_motivation p {
+   color: #fff;
+   display: flex;
+   justify-content: center;
+   font-size: 30px;
+   letter-spacing: 15px;
+   top: 1px;
+   /* font-family: auto; */
+   font-family: sans-serif;
+   -webkit-text-stroke: 1px #ffffff;
+}
+
+                      /* start header */
+.header {
+   /* background-color: #333; Couleur de fond du header */
+   color: #fff; /* Couleur du texte dans le header */
+   padding: 10px; /* Espacement intérieur du header */
+   height: 90px;
+   opacity: 0;
+   transform: translateY(-30px);
+   animation: apparition 0.4s 1s ease-out forwards;
+   background-color: transparent;
+ }
+ 
+ nav {
+   display: flex; /* Utilisation de Flexbox pour aligner les éléments de la navbar */
+   justify-content: space-between; /* Alignement à gauche et à droite */
+   align-items: center; /* Alignement vertical des éléments de la navbar */
+   
+ }
+ 
+ ul {
+   list-style: none; /* Suppression de la liste par défaut */
+   margin: 0; /* Suppression des marges par défaut */
+   padding: 0; /* Suppression des espacements par défaut */
+   
+ }
+ 
+ li {
+   display: inline-block; /* Affichage des éléments de la liste en ligne */
+   margin-right: 20px;/* Espacement entre les éléments de la liste*/
+   padding: 30px;
+   
+ }
+ .other_section li a {
+    /* padding-left: 50px; */
+    font-style: oblique;
+    font-size: 20px;
+    color: #2803ff; /* Couleur des liens dans la navbar */
+    text-decoration: none; /* Suppression de la soulignement des liens */
+    height: auto;
+    transition-delay: 0.3s;
+    
+    
+ }
+ .logo img {
+    width: 107px; /* Taille maximale de l'image */
+    height: 82px; /* Hauteur de l'image adaptée en conséquence */
+    margin-left: 100px ;
+    
+ }
+ .logo img:hover {
+   transform: translateX(-3px) translateY(-3px);
+
+}
+
+ .button .LOGIN{
+  color: #2803ff;
+  background-color: transparent;
+  border: transparent;
+  font-style: oblique;
+  font-size: 20px;
+  transition-delay: 0.4s;
+  
+  
+ }
+ .button .LOGIN:hover{
+   transform: translateY(-2px);
+   border-bottom: 3px solid #fff;
+   
+   
+
+ }
+ .button .Sign_up{
+  color: #ffffff;
+  background-color: #2803ff;
+  border-radius: 14px ;
+  font-style: oblique;
+  font-size: 20px;
+  margin: 10px;
+  width: 100px;
+
+ }
+
+
+ .button .Sign_up:hover{
+   color: #2803ff;
+  background-color: transparent;
+  border: transparent;
+  font-style: oblique;
+  font-size: 20px;
+  margin: 10px;
+  width: 100px;
+  border: #fff ;
+  border: 120px;
+  transform: translateY(-2px);
+
+ }
+
+nav .other_section li a:hover{
+   color: #fff;
+   border-bottom: 3px solid blue;
+   
+}
+
+                         /* end header */
+
+                         /* start logout*/
+.logou a {
+ 
+   color: black;
+   text-decoration: none ;
+}
+
+
+                         /*end logout*/ 
+
+                         /*position ball et member*/
+.logo_uic{
+
+
+   display: flex;
+   flex:5;
+   height: 50;
+}
+.membre{
+   display: flex;
+   flex :1;
+   justify-content: end;
+   
+
+}
+.membre .Parg1 {
+
+       /* background-color: #16764a; */
+       font-size: 30px;
+       margin-left: -auto;
+       color: #fff;
+       margin-top: 50px;
+       /* border: 1px solid beige; */
+       height: 100px;
+       margin-right: 150px;
+       -webkit-text-stroke: 1px #ffffff;
+}
+.membre .Parg1 span {
+
+   font-size: 35px;
+   color:blue;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+   
+
+}
+
+.image_animee{
+
+   
+   display: flex;
+   width: 900px;
+   height: 183px;
+   justify-content: flex-start;
+   top: 20px;
+   align-items: center;
+   margin-left: 65px;
+}
+.image_animee a{
+   color: #fff;
+   margin: 20px;
+   font-size: 35px;
+   
+ 
+ 
+}
+
+                        /* animation ball */
+
+.logo_uic  a img {
+  
+   animation: logo_uic 5s linear infinite;
+   height: 200px;
+   transform: translateX(-90px);
+   /* animation: apparition 1s 1.9s ease-out forwards; */
+}
+@keyframes logo_uic{
+      0% {
+       transform: translateX(1);
+ }
+      50% {
+       transform: translateX(100px);
+ }
+      100% {
+       transform: translateX(1);
+ }
+}
+                        /* fin animation */
+                        
+                        /* apparicient de text _home*/
+@keyframes apparition {
+      100%{
+         opacity: 1;
+         transform: none;
+      }  
+}
+                        /* fin apparicient de text _home*/
+
+                                      /*slider */
+.description_uicsport{
+   
+   
+   
+       /* background: linear-gradient(black, blue,#fff); */
+       background-image: url(../video/WhatsApp\ Image\ 2023-05-18\ at\ 23.35.17.jpeg);
+       height: 500px;
+       background-color: #fff;
+       display: flex;
+       justify-content: space-between;
+       BACKGROUND-POSITION-Y: 498px;
+
+}
+
+.img-des img{
+ 
+   width: 478px;
+   height: 315px;
+   border-radius: 20px;
+   position: relative;
+   top: 28px;
+ 
+}
+.img-des {
+   
+   width: 50%;
+   height: 100%;
+   display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+.text{
+   
+   width: 50%;
+   height: 100%;
+}
+.title{
+
+   display: flex;
+   justify-content: center;
+   font-size: 70px;
+   color: blue;
+      /* color: transparent #fff; */
+      -webkit-text-stroke: 1px #fff;
+      background-position: 0 0;
+      animation: back 20s linear infinite;
+      
+      opacity: 0;
+      transform: translateX(-400px);
+      animation: apparition 0.9s 1.6s ease-out forwards;
+      right: 35px;
+      position: relative;
+      bottom: 30px;
+      
+
+}
+.text p{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   letter-spacing: 5px;
+   width: 700px;
+   margin-top: 0px;
+   
+   font-size: 20px;
+   color: #fff ;
+   top : -71px;
+   font-family: 'Roboto', sans-serif;
+   
+   
+}
+
+
+                                    /*ANNONCE*/
+.annonce{
+
+   height: 200px;
+   background-color:#fff;  
+   
+   background-image: url(../video/WhatsApp\ Image\ 2023-05-18\ at\ 23.35.17.jpeg);
+   background-position: center;
+   
+}
+.annonce p{
+   position: relative;
+   font-size: 90px;
+   font-family: 'Anton ';
+   
+   transform: translateX(100%);
+  animation: slideInOut 10s infinite alternate;
+  color: #fff;
+  /* color: transparent #fff; */
+  -webkit-text-stroke: 1px black;
+  top: 60px;
+  font-weight: 600;
+
+  
+}
+@keyframes slideInOut {
+   0% {
+     transform: translateX(-100%);
+   }
+   100% {
+     transform: translateX(100%);
+   }
+ }
+
+
+
+
+
+                                                           /*slider news*/
+
+
+.slider-box{
+   width: 600px;
+   max-height: 90vh;
+   position: relative;
+   overflow: hidden;
+   margin: 30px auto;
+   justify-content: center;
+   align-items: center;
+   /* top: -20px; */
+    
+   
+}
+#slider{
+
+   width: 100%;
+   display: inline-flex;
+
+
+}
+#slider img{
+
+   width: 100%;
+   border-radius: 3%;
+   
+
+}
+.indicators{
+   position: absolute;
+   left: 50%;
+   bottom: 20px;
+   transform: translateX(-50%);
+}
+.indicators span{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: black;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.active{
+   background-color: blue !important;
+
+
+
+}
+.slider-all{
+   /* background:linear-gradient(#fff,black,green ); */
+   background: url(../video/abigail-keenan-8-s5QuUBtyM-unsplash.jpg); 
+
+  
+   height: 790px;
+}
+                          /*title of slider */
+
+.title-slider{
+
+   /* background: linear-gradient(#fff, blue,black); */
+    display: flex;
+    justify-content: center;
+    color: blue;
+    -webkit-text-stroke: 1px #fff;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    opacity: 0;
+    transform: translateX(-400px);
+    animation: apparition 0.9s 1.6s ease-out forwards;
+    height: 120px;
+
+      
+     
+}
+.title-slider h1{
+   font-size: 120px;
+    position: relative;
+    /* top: -52px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#userr{
+
+   color: blue;
+     -webkit-text-stroke: 1px #fff;
+}
+
+
+
+
+
+

@@ -1,0 +1,154 @@
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+.cont-home{
+
+    background-image: url(../video/baskett.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-position: center;
+    height: 754px;
+}
+.type_team a {
+
+    
+    font-size: 20px;
+    color: #FFF;
+    text-decoration: none;
+    padding: 15px;
+    background-color: blue;
+    border-radius: 40px;
+    margin: 24px;
+    
+
+
+    
+}
+.type_team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+                            /* style button  */
+.text_type{
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: 400px;
+}
+.button-type button{
+
+    margin-left: 20px;
+    padding: 14px;
+    background-color: transparent;
+    border-radius: 27px;
+    border-color: blue;
+    color: #fff;
+    margin-left: 64px;
+    
+    font-size: 20px;
+    font-family: 'Abril Fatface', cursive;
+    opacity: 0;
+    transform: translateY(-500px);
+    animation: apparition 0.9s 1.7s ease-out forwards;
+}
+.button-type  :hover{
+    background-color: #FFF;
+    color: blue;
+
+}
+.button-type button i {
+
+    color: orange
+}
+#foot i  {
+
+    color: blue;
+}
+
+
+
+
+
+
+
+                   /* style three carte member   */
+
+.member_basket {
+
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.member_basket .carte{
+    /* background-color: yellowgreen; */
+    width: 362px;
+    height: 450px;   
+}
+.title_name{
+    display: flex;
+
+}
+
+
+.title_name h2 {
+    margin-left: 20px;
+    font-size: 32px;
+    margin-top: 39px;
+    font-family: 'Abril Fatface', cursive;
+    color: #FFF;
+}
+.title_name h2 span{
+    color:blue;
+    font-size: 35px;
+    padding: 0px;
+    margin: 0px;
+    
+}
+.title_name h1 {
+    margin-left: 20px;
+    margin-left: 20px;
+    font-size: 61px;
+    display: flex;
+    justify-content: center;
+    color: #FFF ;
+    /* align-items: center; */
+}
+.img_player{
+margin-top: -78px;
+width: 100%;
+}
+.button-type{
+    top: 20px;
+}
+
+.team_title{
+    position: relative;
+    /* background-color: red; */
+    height: 200px;
+    bottom: -243px;
+    display: flex;
+    justify-content: center;
+    font-size: 57PX;
+    /* letter-spacing: 29px; */
+    left: 10px;
+}
+.team_title h2{
+
+    color: #fff;
+    letter-spacing: 29px;
+    -webkit-text-stroke: 3px blue;
+
+}
+.team_title h3{
+   position: relative;
+    color: transparent;
+    letter-spacing: 29px;
+    -webkit-text-stroke: 3px blue;
+    right: 10px;
+
+}
+

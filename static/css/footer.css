@@ -1,0 +1,74 @@
+.footer {
+    background-color: #001825;
+ 
+    height: 280px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .commentaire,.contact{
+    padding: 20px;
+    border: solid 0 0 0 20px;
+    
+    color: #fff;
+  }
+  
+ 
+  .commentaire h3{
+    font-size:40px;
+     color: blue;
+     -webkit-text-stroke: 1px #fff;
+     text-align: center;
+     
+   
+ }
+  
+ .commentaire textarea{
+ 
+    
+    width: 300px;
+     height: 50px;
+ }
+ .commentaire button {
+ 
+    display: block;
+     position: relative;
+     left: 80px;
+     font-size: 20px;
+     border-radius: 18px;
+     -webkit-text-stroke: 1px #fff;
+     color: blue;
+     background-color: blue;
+     width: 120px; 
+      margin-top: 20px;
+ }
+ 
+ .contact h3{
+    font-size:40px;
+    color: blue;
+    -webkit-text-stroke: 1px #fff;
+    text-align: center;  
+ 
+ 
+ }
+ .uicinfo{
+    padding-right: 20px;
+ }
+ 
+ .uicinfo img{
+    width: 234px;
+    height: 78px;
+    position: relative;
+    top: 45px;
+ 
+    
+ }
+ .uicinfo p{
+ 
+    color: #fff;
+    position: relative;
+    top: 60px;
+ }
+ 
+ .contact i {
+    font-size: 20px;
+ }

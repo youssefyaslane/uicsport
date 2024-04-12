@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/rev.css' %}">
+
+
+
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}"/>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="all">
+        
+        <div class="text">
+            <a href="{% url 'home1' %}">
+                <img src="{% static 'video/Logo.png' %}" alt="erreur" style="width: 120px; height: 100px;">
+              </a>
+        </div>
+        <div class="formulaire">
+            <div class="content_formulaire">
+                <div class="title">
+                    <h1>Stadium Reserve</h1>
+    
+                </div>
+             <div class="message">
+                {% if message %}
+                    <p>{{ message }}</p>
+                {% endif %}
+             </div>
+    
+              
+                <div class="form">
+                    <form action="/reservation/" method="POST" onsubmit="return validateForm()">
+                        {% csrf_token %}
+                         <div class="select_terrain">
+                            <div class="select_terrain_logo">
+                                <i class="fa-solid fa-basketball fa-beat"></i>
+                            </div>
+                            
+                            <select id="terrain" name="terrain">
+                                {% for terrain in terrains %}
+                                    <option value="{{ terrain.nom }}">{{ terrain.nom }}</option>
+                                {% endfor %}
+                            </select>
+                    </div>
+                            
+                        
+                       
+                        
+                        <br>
+                        <div class="date_debut">
+                            <i class="fa-regular fa-calendar fa-beat-fade">Check-in</i>
+                            <input type="datetime-local" id="date_debut" name="date_debut">
+                        </div>
+            
+                        
+                        
+                        <br>
+                        <div class="date_debut">
+                            <i class="fa-regular fa-calendar fa-beat-fade">Check-out</i>
+                        <input type="datetime-local" id="date_fin" name="date_fin">
+                        </div>
+                        <br>
+                        <div class="btn-inscription">
+                              <input type="submit" value="Reserve">
+                        </div>
+                        
+                    </form>
+                </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    <script>
+        function validateForm() {
+            var dateDebut = new Date(document.getElementById("date_debut").value);
+            var dateFin = new Date(document.getElementById("date_fin").value);
+            var startHour = dateDebut.getHours();
+            var endHour = dateFin.getHours();
+            var startDay = dateDebut.getDay();
+            var endDay = dateFin.getDay();
+            var currentDate = new Date();
+            var duree = (dateFin - dateDebut) / 1000;
+            
+            if (startHour < 9 || endHour > 18) {
+                alert("Reservations are only allowed between 9 a.m. and 6 p.m.");
+                return false;
+            }
+            
+            if (startDay < 1 || endDay > 5) {
+                alert("Reservations are only allowed bettween Monday and Friday");
+                return false;
+            }
+            // if (startDay != endDay ) {
+            //     alert("Vous avez depasse le taux de reservation ");
+            //     return false;
+            // }
+            if (dateDebut >= dateFin) {
+            alert("The Check-in Date Must Be Before The Check-out Date");
+            return false;
+            }
+            if (dateFin < currentDate) {
+            alert("date cannot be a past date.");
+            return false;
+            }
+            if (duree > 7200) {
+            alert("The reservation Time cannot exceed 2 hours.");
+            return false;
+            }
+            
+            
+            return true;
+        }
+    </script>
+</body>
+</html>

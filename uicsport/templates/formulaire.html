@@ -1,0 +1,65 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inscription au club sportif</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/formulaire.css' %}">
+           <!-- font awesome  -->
+           <link rel="stylesheet" href="{% static 'css/all.min.css' %}"/>
+
+
+                        <!-- font___google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cont_all">
+        <div class="image_inscription_groupe">
+            <a  href="{% url 'home1' %}"><img src="/static/video/Logo.png " alt="erreur" ></a>
+        </div>
+        
+        
+        <div class="inscription_groupe-form">
+            
+            <form method="post" class="inscription-form" action="{% url 'form' %}" >
+                {% csrf_token %}
+                <div class="title_form-inscription">
+                    <h2>UIC Sport registration</h2>
+                </div>
+                {% if error_message%}
+                  <p style="font-size: 20px; margin-left: 30px;">{{ error_message}}</p>
+              {% endif %}
+                <div class="input-inscription-form">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" name="full_name" id="id_full_name"  placeholder="Full name" required>
+                </div>
+                <div class="input-inscription-form">
+                    <i class="fa-regular fa-envelope"></i>
+                   <input type="email"  name="email" id="id_email" placeholder="email" required> 
+                </div>
+                <div class="input-inscription-form">
+                    <i class="fa-solid fa-phone"></i>
+                   <input type="tel"  name="number" id="id_number"  placeholder="number " required>
+                </div>
+                <div class="select-inscription-form">
+                   <div class="DISCIPLINE_icons">
+                    <i class="fa-solid fa-basketball"></i>
+                   </div>
+                   <select name="discipline" id="id_discipline" required>
+                       <option value="football">Football</option>
+                       <option value="basketball">Basketball</option>
+                       <option value="volleyball">Tennis</option>
+                   </select>
+                </div>
+                <div class="btn-inscription">
+                    <input type="submit" value="submit">
+                </div>
+            </form>
+        </div>
+       
+    </div>
+   
+</body>
+</html> 

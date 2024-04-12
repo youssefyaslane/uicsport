@@ -1,0 +1,273 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Page_Home.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}"/>
+
+ 
+                                 <!-- font awesome  -->
+    <link rel="stylesheet" href="static/css/all.min.css"/>
+                                 <!--GOOGLE Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+    
+    <title>Groupe Sportif</title>
+</head>
+<body>
+    
+<div class="all">
+    <div class="header">
+            <nav>
+                <div class="logo">
+                    <a href="{% url 'home' %}">
+                      <img src="static/video/Logo.png" alt="erreur">
+                    </a>
+                </div>
+                 <ul class="other_section">
+                     <li><a href="{% url 'team' %}">Team</a></li>
+                     <li><a href="{% url 'signin' %}" onclick="showAlert()">Registration</a></li>   
+                     <li><a href="#news">News</a></li>
+                     <li><a href="{% url 'signin' %}" onclick="showAlert()">Reserve</a></li>
+                </ul>
+                <div class="authentification">
+                <div class="button">
+                    <form action="POST">
+                        
+                        <a href="{% url 'signin' %}"><input class="LOGIN " type="button" value="Login"></a>
+                        <a href="{% url 'signup' %}"><input class="Sign_up"type="button" value="Sign Up"></a>
+                    </form>
+                </div>
+
+
+         
+                </div>
+                
+            </nav>
+    </div>
+    <div class="vedio_cover">
+                    <video class="video_pagehome" autoplay muted loop>
+                        <source src="static/video/video_cover.mp4" type="video/mp4">
+                    </video>
+                
+                <div class="text_vedio">
+                    <h1 class= "aanimate__animated animate__bounce animate__delay-2s" ><span>Uic</span> <br> <span> Sport</span></h1>
+                    <div class="text_motivation">
+                        <p>Good, Better, Best. Never Let It Rest.</p>
+    
+                    </div>
+                    <div class="buttom_learn_more"><a href="#test"><button type="button">learn more <i class="fa-solid fa-arrow-right fa-fade"></i></button></a>
+                    </div>
+                    
+
+                    <div class="logo_uic">
+                        <div class="image_animee">
+                         
+                              <a href="https://web.facebook.com/profile.php?id=100054501308002">
+                                  <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="https://chat.whatsapp.com/FkX4D7j9rhP5XCL0GmtVL9">
+
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                                <a href="https://www.instagram.com/uic_sport/">
+
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                        </div>
+                        <div class="membre">
+
+                         <h2 class="Parg1"><span> +100</span><br> Member</h2>
+                         <h2 class="Parg1"><span> +12</span><br> Staff</h2>
+
+                        </div>
+                        
+
+                
+                    </div>
+
+                </div>
+                
+    </div>
+        
+</div>
+
+
+
+        
+    <div class="description_uicsport">
+
+     <div class="img-des">
+        <img src="/static/video/image_dis.jpeg" alt="" srcset="">
+     </div>
+    <div class="text" id="test">
+      <div class="title">
+        <h2>About Us</h2>
+
+        
+      </div>
+      <p>
+        The university sports group is a dynamic and competitive organization that brings together students staff members and passionate sports coaches.
+        <br>
+        They have accumulated numerous trophies and accolades over the years thanks to their dedication hard work and team spirit .
+   
+    </p>
+    </div>        
+
+
+
+
+
+    </div>
+
+
+   <!-- <div class="annonce">
+    <p>UIC SPORT  THE BEST GROUPE </p>
+   </div> -->
+
+    
+   <div class="slider-all" id="news">
+    <div class="title-slider">
+        <h1>News</h1>
+    </div>
+    <div class="slider-box">
+        <div id="slider">
+            <img src="{% static 'video/newsPNG.PNG' %}" alt="">
+            <img src="static/video/AFF.PNG" alt="">
+            <img src="static/video/AFFFF.PNG" alt="">
+        </div>
+        <div class="indicators">
+            <span id="btn1" class="active"></span>
+            <span id="btn2"></span>
+            <span id="btn3"></span>
+
+        </div>
+
+
+    </div>
+   </div>
+    
+    <footer>
+        <div class="footer">
+            <div class="commentaire">
+                <form action="{% url 'enregistrer_commentaire' %}" method="POST">
+                    {% csrf_token %}
+
+                    <h3>Comment</h3>
+                    <textarea name="commentaire"></textarea>
+                    <button type="submit">Submit</button>
+
+                </form>
+            </div>
+
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p><i class="fa-regular fa-envelope"></i>  groupesportif2023@gmail.com</p>
+                <p> <i class="fa-solid fa-phone"></i>  +212 00000000 </p>
+            </div>
+
+
+            <div class="uicinfo">
+                
+            <img src="{% static 'video/logo-footer.png' %}" alt="Logo footer">
+            <p class="adress">Campus de l'Université Internationale de Casablanca <br> Casa Green Town. ROUTE PROVINCIALE 3020, <br>Casablanca 50169</p> 
+            <p></p>
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </footer>
+
+
+
+
+
+
+
+<script>
+ let slide = document.getElementById("slider");
+ let btn1 = document.getElementById("btn1");
+ let btn2 = document.getElementById("btn2");
+ let btn3 = document.getElementById("btn3");
+
+
+ btn1.onclick = function(){
+
+    slide.style.transform = " translateX(0px)";
+    btn1.classList.add('active');
+    btn2.classList.remove('active');
+    btn3.classList.remove('active');
+
+ };
+ btn2.onclick = function(){
+
+   slide.style.transform = " translateX(-100%)";
+   btn2.classList.add('active');
+   btn1.classList.remove('active');
+   btn3.classList.remove('active');
+
+};
+ btn3.onclick = function(){
+
+slide.style.transform = " translateX(-200%)";
+btn3.classList.add('active');
+btn1.classList.remove('active');
+btn2.classList.remove('active');
+
+};
+let currentSlide = 1; // Piste actuelle du slider
+
+function changeSlide() {
+  if (currentSlide === 1) {
+    slide.style.transform = "translateX(0px)";
+    btn1.classList.add('active');
+    btn2.classList.remove('active');
+    btn3.classList.remove('active');
+  } else if (currentSlide === 2) {
+    slide.style.transform = "translateX(-100%)";
+    btn2.classList.add('active');
+    btn1.classList.remove('active');
+    btn3.classList.remove('active');
+  } else if (currentSlide === 3) {
+    slide.style.transform = "translateX(-200%)";
+    btn3.classList.add('active');
+    btn1.classList.remove('active');
+    btn2.classList.remove('active');
+  }
+
+  // Mettre à jour la piste actuelle
+  currentSlide++;
+  if (currentSlide > 3) {
+    currentSlide = 1;
+  }
+}
+
+// Appeler la fonction changeSlide toutes les 5 secondes (5000 millisecondes)
+setInterval(changeSlide, 5000);
+
+
+function showAlert() {
+        alert('you have not authenticated');
+    }
+
+</script>
+</body>
+</html>

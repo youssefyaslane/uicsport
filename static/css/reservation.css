@@ -1,0 +1,161 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  font-family:'Roboto Condensed', sans-serif;
+  background-color: black #fff;
+  /* background-image: url("../video/bg.jpg"); */
+  overflow-x: hidden;
+  
+
+}
+.all{
+
+  height: 754px;
+  background-color: blue;
+  /* background-image: url(../tesrt/vedio/WhatsApp\ Image\ 2023-06-21\ at\ 21.45.28.jpeg); */
+  display: flex;
+  background-image: url(../video/WhatsApp\ Image\ 2023-06-22\ at\ 02.14.25.jpeg);
+}
+.formulaire{
+
+  width :  50%;
+}
+.text{
+
+width: 50%;
+
+}
+.content_formulaire{
+  background:linear-gradient(black,blue,#fff );
+  height: 75%;
+  width: 90%;
+  box-shadow: 1px 8px 6px 10px rgba(27, 38, 118, 0.79);
+  -webkit-box-shadow: 1px 8px 6px 10px rgba(27, 38, 118, 0.79);
+  -moz-box-shadow: 1px 8px 6px 10px rgba(27, 38, 118, 0.79);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  border: 3px solid #fff;
+  position: relative;
+  top: 122px;
+  left: 20px;
+  display: inline-block;
+  text-align: center;
+} 
+p{
+  font-size: 20px;
+}
+.title{
+  
+  width: 90%;
+  height: 50px;   
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  -webkit-text-stroke: 1px black;
+  margin-top: 10px;
+
+}
+.message{
+  margin-top: 50px;
+}
+.select_terrain{
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 22px;
+  margin-top: 20px ;
+  height: 45px;
+
+}
+select{
+  display: flex;
+justify-content: center;
+padding: 5px;
+font-size: 16px;
+border: transparent;
+background-color: #fff;
+border-radius: 0px 30px 30px 0px;
+width: 540px;
+height: 45px;
+color: gray;
+font-size: 17px;
+border: none;
+outline: none;
+-webkit-appearance: none; /* pour les navigateurs basés sur WebKit */
+-moz-appearance: none; /* pour les navigateurs basés sur Gecko */
+appearance: none; /* pour les autres navigateurs */
+background-image: none; /* pour éviter l'affichage d'une icône par défaut */
+padding-left: 24px;
+}
+
+
+.select_terrain_logo{
+  display: flex;
+
+  color: blue;
+  background-color: #fff;
+  border-radius: 30px  0px 0px 30px;
+  margin-left: 0px;
+  
+}
+.select_terrain_logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 7px;
+  width: 84px;
+ 
+  
+}
+.date_debut{
+  width:630px;
+  height: 45px;
+  border-color: red;
+  background: #fff;
+  margin: 10px 0;
+  border: 2px solid blue;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  margin-left: 18px;
+  margin-top: 15px;
+}
+.date_debut i {
+  flex : 1;
+  text-align: center;
+  color: blue;
+  font-size: 10px;
+  z-index: 1;
+}
+.date_debut input {
+  flex : 5;
+  border: none;
+  outline: none;
+  width: 50%;
+  font-size: 18px;
+  border-radius: 50px;
+  height: 30px;
+  margin-left: 10px;
+}
+.btn-inscription{
+  width: 700px;
+  display: flex;
+  justify-content: center;
+
+  
+  
+}
+.btn-inscription input {
+  margin-top: 5px ;
+  padding: 7px 50px 7px 50px; 
+  font-size: 20px;
+  border-radius: 15px;
+  -webkit-text-stroke: 1px #fff;
+  color: blue;
+  background-color: blue;
+   
+} 

@@ -1,0 +1,78 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Page_Home.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/authentification.css' %}"/>
+    
+                           <!-- font awesome  -->
+      <link rel="stylesheet" href="{% static 'css/all.min.css' %}"/>
+    <!--GOOGLE Font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <title>Groupe Sportif</title>
+</head>
+<body>  
+    
+<div class="all">
+        <div class="cont_all">
+          
+          <div class="image_cover_inscription">
+            
+            <a  href="{% url 'home' %}"><img src="/static/video/Logo.png " alt="erreur" class="Terrain"></a>
+            <p>WELCOME TO UIC SPORTS WEBSITE </p> 
+            
+          </div>
+          <div class="sign-in">
+            <form method="POST" class="sign-in-form" action="{% url 'signin' %}">
+                {% csrf_token %}
+                <div class="title_sign_in">
+                    <h2>Sign in</h2>
+                </div>
+        
+                {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+        {% if error_message%}
+                  <p style="font-size: 20px; margin-left: 30px;">{{ error_message}}</p>
+              {% endif %}
+                  
+                <div class="input-sign-in">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" placeholder="user" name="username" required>
+                </div>
+                <div class="input-sign-in">
+                    <i class="fa-sharp fa-solid fa-lock"></i>
+                    <input type="password" placeholder=" Password" name="mdp" required>
+                </div>
+                <div class="btn-sign-in">
+                    <input type="submit" value="Login" required>
+                </div>
+            </form>
+        </div>
+        
+  
+  
+
+              </form>
+              </div>  
+          </div>   
+
+
+
+
+
+
+</div>
+
+    
+
+
+</body>
+</html>
